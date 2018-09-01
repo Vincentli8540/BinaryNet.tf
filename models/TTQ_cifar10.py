@@ -2,7 +2,7 @@
 from nnUtils import *
 
 model = Sequential([
-    TernarizedSpatialConvolution(128,3,3,1,1, padding='VALID', bias=False,name='ttq_conv2d_1'),
+    SpatialConvolution(128,3,3,1,1, padding='VALID', bias=False,name='conv2d_1'),
     BatchNormalization(),
     HardTanh(),
     TernarizedSpatialConvolution(128,3,3, padding='SAME', bias=False,name='ttq_conv2d_1'),
